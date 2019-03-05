@@ -8,9 +8,20 @@ function findNamesStartA() {
         if (fullName.startsWith('A')) {
             namesArray.push(fullName)
         }
-    // console.log(namesArray.length)
     })
     console.log(namesArray.length)
 }
 findNamesStartA()
 
+function findNamesStartZ() {
+    let names = characters;
+    let namesArray = []
+    characters.forEach(function (chars) {
+        let fullName = (chars.name);
+        if (fullName.startsWith('Z')) {
+            namesArray.push(fullName)
+        }
+    })
+    console.log(namesArray.length)
+}
+findNamesStartZ()
