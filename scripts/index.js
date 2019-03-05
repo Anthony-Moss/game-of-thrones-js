@@ -25,3 +25,17 @@ function findNamesStartZ() {
     console.log(namesArray.length)
 }
 findNamesStartZ()
+
+function isDead() {
+    let chars = characters;
+    let deadCharsArray = [];
+    chars.forEach(function (charAlive) {
+        let alive = (charAlive.died);
+        // console.log(alive)
+        if (alive !== "") {
+            deadCharsArray.push(chars)
+        }
+    })
+    console.log(deadCharsArray.length)
+}
+isDead()
