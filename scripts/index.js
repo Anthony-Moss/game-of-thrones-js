@@ -40,25 +40,68 @@
 // }
 // isDead()
 
-function mostTitles() {
-    let titlesArray = [];
-    
-    characters.forEach(function (characters){
-    titlesArray.push(characters.titles.length);
-    // console.log(Math.max(titlesArray));
-}); 
-// console.log(titlesArray)
-let max = Math.max(...titlesArray)
-if (max === titles.length) {
-    console.log(characters['name'])
-}
-}
-mostTitles()
+function mostTitles(characters) {
+    let titlesLengthArray = []
+    noTitle = [""]
+    characters.forEach(function (person) {
+        console.log(person.titles);
+        if (person.titles[0] !== noTitle) {
+            titlesLengthArray.push(person.titles);
+        }    
+    });
+    // titleLengthArray.forEach(function (person) {
 
-// function getTitles(char){
-//     titlesArray.push(char(titles.length))
-//     if (Math.max(titlesArray) === characters.titles.length) {
-//         console.log(characters['name'])
-//     }
-// }
+    // })
+    // if titleLengthArray.length > 0) {
 
+    // }
+    console.log(titlesLengthArray)
+}
+
+
+
+function whoIsHotPie(characters) {
+    const arrayOfHotPies = characters.filter(function (person) {
+        return person.name === person.name;
+    });
+    if (arrayOfHotPies.length > 0) {
+        const hotPie = arrayOfHotPies[0];
+        return hotPie.playedby;
+    } else {
+        return "no hot pie found"
+    }
+}
+
+function findActorFor2(characters, characterName) {
+    const theCharacter = character.find()
+}
+
+function createHouseHistogram(characters) {
+    const histogram = {};
+
+    characters.forEach(function (person) {
+        // console.log(person.allegiances);
+        person.allegiances.forEach(function (house) {
+            // do something with the house
+            if (histogram[house] !== undefined) {
+                histogram[house] += 1;
+            } else {
+                histogram[house] = 1;
+            }
+        });
+    });
+    return histogram;
+}
+
+function createHouseHistogram2(characters) {
+    const histogram = new Map();
+    characters.forEach(function (person) {
+        person.allegiances.forEach(function (house) {
+            if (histogram.has(house)) {
+                histogram.set(house, currentValue +1);
+            } else {
+                histogram.set(house, 1);
+            }
+        });
+    });
+}
